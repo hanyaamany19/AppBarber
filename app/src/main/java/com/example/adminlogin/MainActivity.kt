@@ -1,5 +1,6 @@
 package com.example.adminlogin
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,6 +24,17 @@ class MainActivity : AppCompatActivity() {
 
         tAntrian.setOnClickListener {
             startActivity(Intent(this, AntrianActivity::class.java))
+            finish()
+        }
+
+        tLogout.setOnClickListener {
+            val sharedPreferences=getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+            val editor=sharedPreferences.edit()
+
+            editor.putString("STATUS","0")
+            editor.apply()
+
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }

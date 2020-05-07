@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun postkeserver(data1:String, data2:String){
-        AndroidNetworking.post("http://192.168.100.14/cukuran/login.php")
+        AndroidNetworking.post("http://cukuran.000webhostapp.com/login.php")
             .addBodyParameter("username", data1)
             .addBodyParameter("password", data2)
             .setPriority(Priority.MEDIUM)
@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
                         if (statuslogin=="1"){
 
-                            val sharedPreferences=getSharedPreferences("CEKLOGIN", Context.MODE_PRIVATE)
+                            val sharedPreferences=getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
                             val editor=sharedPreferences.edit()
 
                             editor.putString("STATUS",statuslogin)

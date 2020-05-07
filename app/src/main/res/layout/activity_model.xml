@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModelActivity">
+    tools:context=".ModelActivity"
+    android:background="#00683F">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:text="Spiritual Teachers App"
+        android:id="@+id/textView"
+        android:gravity="center_horizontal" />
+
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/myProgressBar"
+        android:visibility="gone"
+        android:indeterminateBehavior="cycle"
+        android:indeterminate="true"/>
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:orientation="vertical" android:layout_marginTop="?attr/actionBarSize">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/nameEditText"
+            android:hint="Name"
+            android:singleLine="true"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="208dp"
+            android:id="@+id/imageView"
+            app:srcCompat="@drawable/placeholder"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Choose Photo.."
+            android:id="@+id/chooseBtn"
+            android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="@android:color/white"
+            android:text="Send"
+            android:id="@+id/sendBtn"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="@android:color/white"
+            android:text="View All"
+            android:id="@+id/openActivityBtn"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:background="@color/colorAccent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

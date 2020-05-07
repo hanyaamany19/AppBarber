@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AdminLogin</string>
+    <string name="nama_model">Nama Model :</string>
 </resources>
