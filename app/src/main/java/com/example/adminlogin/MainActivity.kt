@@ -17,8 +17,18 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        taModel.setOnClickListener{
+            startActivity(Intent(this, Model2Activity::class.java))
+            finish()
+        }
+
         tLayanan.setOnClickListener {
             startActivity(Intent(this, LayananActivity::class.java))
+            finish()
+        }
+
+        taLayanan.setOnClickListener {
+            startActivity(Intent(this, Layanan2Activity::class.java))
             finish()
         }
 

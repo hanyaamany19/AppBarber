@@ -13,25 +13,25 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONArrayRequestListener
 import com.androidnetworking.interfaces.JSONObjectRequestListener
-import kotlinx.android.synthetic.main.activity_layanan.*
+import kotlinx.android.synthetic.main.activity_model.*
 import org.json.JSONArray
 import org.json.JSONObject
 
-class LayananActivity : AppCompatActivity() {
+class ModelActivity : AppCompatActivity() {
 
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_layanan)
+        setContentView(R.layout.activity_model)
 
         val context=this
 
-        val recyclerView2 = findViewById(R.id.recyclerView2) as RecyclerView
-        recyclerView2.layoutManager= LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+        val recyclerView1 = findViewById(R.id.recyclerView1) as RecyclerView
+        recyclerView1.layoutManager= LinearLayoutManager(this, LinearLayout.VERTICAL, false)
 
-        val layanan=ArrayList<Layanan>()
+        val mdl=ArrayList<Model>()
 
-        AndroidNetworking.get("http://192.168.100.14/cukuran/layanan.php")
+        AndroidNetworking.get("http://192.168.100.14/cukuran/model.php")
             .setPriority(Priority.MEDIUM)
             .build()
             .getAsJSONObject(object : JSONObjectRequestListener {
@@ -41,18 +41,15 @@ class LayananActivity : AppCompatActivity() {
                     val jsonArray = response.getJSONArray("result")
                     for (i in 0 until jsonArray.length()){
                         val jsonObject = jsonArray.getJSONObject(i)
-                        Log.e("_kotlinTittle", jsonObject.optString("nama"))
+                        Log.e("_kotlinTittle", jsonObject.optString("name"))
 
-                        val isi1 = jsonObject.optString("nama").toString()
-                        val isi2 = jsonObject.optString("harga").toString()
-                        val isi3 = jsonObject.optString("keterangan").toString()
+                        val isi1 = jsonObject.optString("name").toString()
 
-                        layanan.add(Layanan("$isi1", "$isi3", "$isi2"))
-
+                        mdl.add(Model("$isi1"))
                     }
 
-                    val adapter = LayananAdapter(layanan)
-                    recyclerView2.adapter= adapter
+                    val adapter = ModelAdapter(mdl)
+                    recyclerView1.adapter= adapter
                 }
 
                 override fun onError(anError: ANError?) {
@@ -60,9 +57,8 @@ class LayananActivity : AppCompatActivity() {
                 }
             })
 
-        btnBack2.setOnClickListener {
-            val intent= Intent(context,MainActivity::class.java)
-            startActivity(intent)
+        btnBack3.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }

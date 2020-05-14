@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun postkeserver(data1:String, data2:String){
-        AndroidNetworking.post("http://cukuran.000webhostapp.com/login.php")
+        AndroidNetworking.post("http://192.168.100.14/cukuran/login.php")
             .addBodyParameter("username", data1)
             .addBodyParameter("password", data2)
             .setPriority(Priority.MEDIUM)

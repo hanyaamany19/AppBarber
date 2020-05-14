@@ -1,57 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="400dp"
+            android:layout_height="170dp"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama"
                 android:textColor="#000"
                 android:id="@+id/tNama"
-                android:textSize="20dp"
-                android:layout_margin="10dp"/>
+                android:textSize="20dp"/>
 
             <TextView
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No Antrian"
                 android:textColor="#000"
                 android:id="@+id/tNoAntrian"
-                android:textSize="20dp"
-                android:layout_margin="10dp"/>
+                android:textSize="20dp"/>
 
             <TextView
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Model"
                 android:textColor="#000"
                 android:id="@+id/tModel"
-                android:textSize="20dp"
-                android:layout_margin="10dp"/>
+                android:textSize="20dp"/>
 
             <TextView
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Layanan"
                 android:textColor="#000"
                 android:id="@+id/tLayanan"
-                android:textSize="20dp"
-                android:layout_margin="10dp"/>
+                android:textSize="20dp"/>
 
             <TextView
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Time"
                 android:textColor="#000"
                 android:id="@+id/tTime"
-                android:textSize="20dp"
-                android:layout_margin="10dp"/>
+                android:textSize="20dp"/>
 
         </LinearLayout>
 

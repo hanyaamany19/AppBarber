@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="50dp"
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="Nama"
             android:textColor="#000"
@@ -18,7 +19,7 @@
             android:layout_margin="10dp"/>
 
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="Harga"
             android:textColor="#000"
@@ -27,7 +28,7 @@
             android:layout_margin="10dp"/>
 
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Keterangan"
             android:textColor="#000"
