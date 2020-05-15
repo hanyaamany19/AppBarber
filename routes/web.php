@@ -30,4 +30,9 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/Layanan/create', 'LayananController@create');
     Route::get('/Layanan/{id}/delete', 'LayananController@delete');
     Route::get('/Layanan', 'LayananController@index');
+
+    Route::get('/Model', 'ModelController@index2');
+    Route::post('/Model/create', 'ModelController@create');
+    Route::get('/Model/{id}/delete', 'ModelController@delete');
+    Route::get('/Model', 'ModelController@index');
 });

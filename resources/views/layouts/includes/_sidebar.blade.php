@@ -19,6 +19,12 @@
         </a>
     </li>
     <li>
+        <a href="/Model">
+        <i class="now-ui-icons tech_watch-time"></i>
+          <p>Model</p>
+        </a>
+      </li>
+    <li>
         <a href="/Layanan">
         <i class="now-ui-icons tech_watch-time"></i>
           <p>Layanan</p>
